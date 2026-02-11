@@ -1,0 +1,10 @@
+IAM_Aachen/
+IAM_Aachen_webp/
+.venv/
+__pycache__/
+
+
+runs/
+out_dir/
+
+saved_models/

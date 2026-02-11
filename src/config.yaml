@@ -1,0 +1,16 @@
+mode: train
+data_root: data/IAM_Aachen
+out_dir: saved_models
+epochs: 800
+batch_size: 4
+lr: 1e-4
+max_w: 2048
+use_lail: false
+llm_name: meta-llama/Meta-Llama-3-1B
+lail_layers: 12
+lail_alpha: 0.001
+lail_ds_blocks: 1
+llm_max_len: 128
+llm_grad_ckpt: true
+run_name: lail_liner_2layer
+save_every: 0
