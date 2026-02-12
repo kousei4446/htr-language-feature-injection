@@ -1,7 +1,7 @@
 mode: train
 data_root: data/IAM_Aachen
 out_dir: saved_models
-epochs: 800
+epochs: 200
 batch_size: 4
 lr: 1e-4
 max_w: 2048
