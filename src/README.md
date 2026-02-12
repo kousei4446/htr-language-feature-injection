@@ -1,6 +1,6 @@
-# `src` 実行ガイド（初めての人向け）
+# 実行ガイド
 
-この README は、`src/train.py` を実際に動かすための手順を順番に説明します。  
+この README は、この研究を実際に動かすための手順を順番に説明します。  
 まずはこの通りに進めれば学習を開始できます。
 
 
@@ -137,30 +137,30 @@ tensorboard --logdir saved_models
 ### Directory Layout
 ```text
 src/
-  train.py               # thin entry point
-  config.yaml            # runtime settings
+  train.py               # エントリポイント
+  config.yaml            # 実行時設定
   app/
     __init__.py
-    main.py              # mode dispatcher (train / infer)
+    main.py              # モード分岐 (train / infer)
     config/
       __init__.py
-      settings.py        # config loader and defaults
+      settings.py        # 設定読み込みとデフォルト値
     data/
       __init__.py
-      dataset.py         # dataset and preprocessing
+      dataset.py         # データセットと前処理
     models/
       __init__.py
-      trocr_ctc.py       # model definition
+      trocr_ctc.py       # モデル定義
     training/
       __init__.py
-      train_loop.py      # training flow and evaluation
+      train_loop.py      # 学習フローと評価
     inference/
       __init__.py
-      predictor.py       # inference flow
+      predictor.py       # 推論フロー
     utils/
       __init__.py
-      text.py            # decode, CER, tokenizer helpers
-      llm.py             # LAIL CLM loss helper
+      text.py            # デコード、CER、トークナイザ補助
+      llm.py             # LAIL CLM損失の補助
 ```
 
 ### Code Flow
