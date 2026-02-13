@@ -1,4 +1,4 @@
-"""Application entry point used by train.py."""
+"""メインエントリリポイント."""
 
 import torch
 from transformers import TrOCRProcessor

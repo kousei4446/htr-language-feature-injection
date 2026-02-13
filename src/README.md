@@ -83,21 +83,27 @@ python train.py
 最良モデルは `out_dir/<run_name>_<timestamp>/checkpoints/best.pt` に保存されます。  
 互換パスとして `out_dir/best.pt` も更新されます。
 
-## 8. 推論を実行（1画像）
+## 8. 推論を実行（1画像 / フォルダ）
 
 `config.yaml` を以下のように変更します。
 
 ```yaml
 mode: infer
 ckpt: saved_models/best.pt
-infer_image: path/to/your_image.jpg
+# infer_image: path/to/your_image.jpg
+infer_dir: path/to/your_images_dir
 ```
+`infer_image` または `infer_dir` のどちらかを指定できます（`infer_image` を指定した場合は単画像推論を優先）。
 
 その後、同じコマンドで実行:
 
 ```powershell
 python train.py
 ```
+
+`infer_dir` 指定時は進捗バーを表示し、各画像の予測は標準出力へ逐次表示しません。  
+推論結果は JSONL で保存されます（1行目: 集計、2行目以降: 各画像）。  
+保存先は `ckpt` で指定したチェックポイントの **1つ上のフォルダ** です。
 
 ## 9. LLM を使う場合（`use_lail: true`）
 

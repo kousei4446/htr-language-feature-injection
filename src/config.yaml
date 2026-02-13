@@ -7,10 +7,13 @@ lr: 1e-4
 max_w: 2048
 use_lail: false
 llm_name: meta-llama/Meta-Llama-3-1B
-lail_layers: 12
+lail_layers: [10,11,12]
 lail_alpha: 0.001
 lail_ds_blocks: 1
 llm_max_len: 128
 llm_grad_ckpt: true
-run_name: lail_liner_2layer
+run_name: trocr-ctc
 save_every: 0
+
+ckpt: saved_models/trocr-ctc/checkpoints/best.pt
+infer_dir: data/IAM_Aachen/test/images

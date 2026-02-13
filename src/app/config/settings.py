@@ -25,6 +25,7 @@ def load_config(path: Path):
         "no_fp16": False,
         "seed": 42,
         "infer_image": None,
+        "infer_dir": None,
         "ckpt": None,
         "use_lail": False,
         "llm_name": "meta-llama/Meta-Llama-3-8B",
